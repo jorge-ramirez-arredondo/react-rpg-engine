@@ -1,0 +1,8 @@
+{
+	"system": "scene",
+	"type": "load",
+	"payload": {
+		"format": "sceneModule",
+		"path": "start/prologueScene.json"
+	}
+}
