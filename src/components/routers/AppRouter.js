@@ -7,21 +7,25 @@ import {
 } from "react-router-dom";
 
 import history from "utilities/history";
-import routes from "constants/routes";
-import MainMenu from "components/pages/MainMenu";
-import GameRouter from "components/routers/GameRouter";
+import UIManager from "components/routers/UIManager";
 
+/*
+  This router is a very basic override for routing.
+
+  Since the user is not supposed to have control over which page they're viewing
+  through the use of the nav bar, the routing just redirects the user back to
+  the base route when they try to navigate away.
+
+  The UIManager is used for handling page and menu management instead.
+*/
 function AppRouter(props) {
   return (
-    <Router hisotyr={history}>
+    <Router history={history}>
       <Switch>
-        <Route path={routes.mainMenu}>
-          <MainMenu />
+        <Route path="/" exact>
+          <UIManager />
         </Route>
-        <Route path={routes.game}>
-        	<GameRouter />
-        </Route>
-	      <Redirect to={routes.mainMenu} />
+	      <Redirect to="/" />
       </Switch>
     </Router>
   );

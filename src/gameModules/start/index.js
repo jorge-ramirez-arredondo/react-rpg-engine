@@ -1,9 +1,9 @@
-import startEvent from "./startEvent.json";
+import startEvents from "./startEvents.json";
 
 import prologueScene from "./prologueScene.json";
 
 const events = {
-  start: startEvent
+  start: startEvents
 };
 
 const scenes = {
