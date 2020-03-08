@@ -1,0 +1,28 @@
+{{#each "test each"}}
+test
+{{#endEach}}
+
+{{#if "TEST"}}{{#else "blah"}}{{#else}}{{#endIf}}
+
+{{
+  console.log("Runs!");
+  const test = {
+    test: "{{}}"
+  };
+  const test2 = "}}";
+  const test3 = `${ test ? ({}) : '{"}}"}'}`;
+
+}}
+
+Here is the story text.
+
+Down bellow is js code:
+
+{{#pause}}
+
+blah
+{{"test"}}
+123
+
+12
+31
