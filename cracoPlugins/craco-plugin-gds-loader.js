@@ -8,7 +8,7 @@ module.exports = {
 
     const rawLoader = {
       test: pluginOptions.test,
-      use: [ "gds-loader" ]
+      use: [ "@jorge-ramirez-arredondo/gds-loader" ]
     }
 
     addBeforeLoader(webpackConfig, loaderByName('file-loader'), rawLoader)

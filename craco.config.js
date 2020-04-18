@@ -1,7 +1,7 @@
-const rawWebpackConfigPlugin = require("./cracoPlugins/craco-plugin-gds-loader");
+const cracoPluginGDSLoader = require("./cracoPlugins/craco-plugin-gds-loader");
 
 module.exports = {
   plugins: [
-   { plugin: rawWebpackConfigPlugin, options: { test: /\.gds$/ } }
+   { plugin: cracoPluginGDSLoader, options: { test: /\.gds$/ } }
   ]
 };
