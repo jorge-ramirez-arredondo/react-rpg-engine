@@ -4,12 +4,11 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.6.3",
-    "@jorge-ramirez-arredondo/game-dialog-script": "file:../gds-parser",
+    "@jorge-ramirez-arredondo/gds-instructions-interpreter": "^1.0.0",
     "@reduxjs/toolkit": "^1.2.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "gds-loader": "file:../gds-loader",
     "immer": "^5.3.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -39,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@jorge-ramirez-arredondo/gds-loader": "^1.0.0"
   }
 }
