@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Provider } from "react-redux";
 
 import AppRouter from "components/routers/AppRouter";
-import store from "store";
+import generateStore from "store/generateStore";
 
 function App() {
+  const storeRef = useRef(null);
+  if (storeRef.current === null) {
+    storeRef.current = generateStore();
+  }
+
   return (
-    <Provider store={store}>
+    <Provider store={storeRef.current}>
       <AppRouter />
     </Provider>
   );
