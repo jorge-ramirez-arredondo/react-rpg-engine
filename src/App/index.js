@@ -1,8 +1,21 @@
 import React, { useRef } from "react";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 
 import AppRouter from "components/routers/AppRouter";
 import generateStore from "store/generateStore";
+import GameModuleLoader from "components/utilities/GameModuleLoader";
+import gameModules from "gameModules";
+
+function WrappedGameModuleLoader(props) {
+  const activeModuleKey = useSelector((state) => state.game.module.activeModuleKey);
+
+  return (
+    <GameModuleLoader
+      {...props}
+      activeModuleKey={activeModuleKey}
+    />
+  );
+}
 
 function App() {
   const storeRef = useRef(null);
@@ -12,7 +25,9 @@ function App() {
 
   return (
     <Provider store={storeRef.current}>
-      <AppRouter />
+      <WrappedGameModuleLoader gameModules={gameModules}>
+        <AppRouter />
+      </WrappedGameModuleLoader>
     </Provider>
   );
 }

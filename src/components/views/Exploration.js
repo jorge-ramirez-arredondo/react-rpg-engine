@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 
+import { useGameModuleLoader } from "components/utilities/GameModuleLoader";
+
 function Exploration(props) {
-  const gameLoading = useSelector((state) => state.game.module.loading);
+  const { loading, activeModule } = useGameModuleLoader();
   const playerName = useSelector((state) => state.game.player.name);
-  const module = useSelector((state) => state.game.module);
   const [dialog, setDialog] = useState("");
 
-  if (gameLoading) {
+  if (activeModule === null || loading) {
     return "Loading...";
   }
 
-  const testScript = module.module.scenes.test;
+  const testScript = activeModule.scenes.test;
 
   console.warn("Interpreter", testScript);
   console.warn(dialog);

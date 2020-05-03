@@ -2,7 +2,7 @@ import config from "constants/config";
 import { actions as gameModuleActions } from "store/slices/gameModule";
 
 const newGame = () => (dispatch) => {
-  dispatch(gameModuleActions.loadModule(config.newGameModuleKey));
+  dispatch(gameModuleActions.setActiveModuleKey(config.newGameModuleKey));
 };
 
 const actions = {
