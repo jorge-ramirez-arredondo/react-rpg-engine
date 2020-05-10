@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
-import { actions as uiManagerActions } from "store/slices/uiManager"
 import gameActions from "store/actions/game";
-import { viewKeys } from "components/views/viewsMap";
+import routes from "constants/routes";
 
 function MainMenu(props) {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   return (
     <React.Fragment>
@@ -15,7 +16,7 @@ function MainMenu(props) {
         <button
           onClick={() => {
             dispatch(gameActions.newGame());
-            dispatch(uiManagerActions.setCurrentView(viewKeys.Exploration));
+            history.push(routes.gameViews.explorationView.$path);
           }}
         >
           Start
