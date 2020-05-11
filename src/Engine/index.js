@@ -4,7 +4,6 @@ import { Provider, useSelector } from "react-redux";
 import RootRouter from "components/routers/RootRouter";
 import generateStore from "store/generateStore";
 import GameModuleLoader from "components/utilities/GameModuleLoader";
-import gameModules from "gameModules";
 
 function ConnectedGameModuleLoader(props) {
   const activeModuleKey = useSelector((state) => state.game.module.activeModuleKey);
@@ -17,7 +16,9 @@ function ConnectedGameModuleLoader(props) {
   );
 }
 
-function App() {
+function Engine(props) {
+  const { gameModules } = props;
+
   const storeRef = useRef(null);
   if (storeRef.current === null) {
     storeRef.current = generateStore();
@@ -32,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default Engine;
