@@ -1,6 +1,8 @@
 {
   "name": "@jorge-ramirez-arredondo/react-rpg-engine",
   "version": "0.1.0",
+  "description": "A React RPG game engine component.",
+  "repository": "git://github.com/jorge-ramirez-arredondo/react-rpg-engine",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
