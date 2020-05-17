@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Engine from "lib";
 import * as serviceWorker from "./serviceWorker";
-import gameModules from "gameModules";
+import devGameModules from "devGameModules";
 
 ReactDOM.render(
-  <Engine gameModules={gameModules} />,
+  <Engine gameModules={devGameModules} />,
   document.getElementById("root")
 );
 
