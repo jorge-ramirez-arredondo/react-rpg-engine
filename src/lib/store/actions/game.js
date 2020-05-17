@@ -1,5 +1,5 @@
-import config from "constants/config";
-import { actions as gameModuleActions } from "store/slices/gameModule";
+import config from "lib/constants/config";
+import { actions as gameModuleActions } from "lib/store/slices/gameModule";
 
 const newGame = () => (dispatch) => {
   dispatch(gameModuleActions.setActiveModuleKey(config.newGameModuleKey));

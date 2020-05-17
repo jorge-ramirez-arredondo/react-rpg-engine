@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Engine from "./Engine";
+import Engine from "lib";
 import * as serviceWorker from "./serviceWorker";
 import gameModules from "gameModules";
 

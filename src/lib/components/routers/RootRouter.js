@@ -6,9 +6,9 @@ import {
   Redirect
 } from "react-router-dom";
 
-import routes from "constants/routes";
-import MainMenu from "components/views/MainMenu";
-import GameViewsRouter from "components/routers/GameViewsRouter";
+import routes from "lib/constants/routes";
+import MainMenu from "lib/components/views/MainMenu";
+import GameViewsRouter from "lib/components/routers/GameViewsRouter";
 
 function RootRouter(props) {
   return (

@@ -1,29 +1,46 @@
 {
-  "name": "react-rpg-engine",
+  "name": "@jorge-ramirez-arredondo/react-rpg-engine",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "craco start",
+    "build-examples": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+  },
   "dependencies": {
-    "@craco/craco": "^5.6.4",
-    "@jorge-ramirez-arredondo/gds-instructions-interpreter": "^1.0.0",
     "@reduxjs/toolkit": "^1.3.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.1.2",
     "immer": "^5.3.6",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
     "redux": "^4.0.5"
   },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@craco/craco": "^5.6.4",
+    "@jorge-ramirez-arredondo/gds-instructions-interpreter": "^1.0.0",
+    "@jorge-ramirez-arredondo/gds-loader": "^1.0.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.1.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-react-app": "^9.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.0",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,8 +56,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@jorge-ramirez-arredondo/gds-loader": "^1.0.4"
   }
 }

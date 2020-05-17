@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-import gameActions from "store/actions/game";
-import routes from "constants/routes";
+import gameActions from "lib/store/actions/game";
+import routes from "lib/constants/routes";
 
 function MainMenu(props) {
   const dispatch = useDispatch();

@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["react-app", {
+      "absoluteRuntime": false
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ]
+}

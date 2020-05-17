@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { Provider, useSelector } from "react-redux";
 
-import RootRouter from "components/routers/RootRouter";
-import generateStore from "store/generateStore";
-import GameModuleLoader from "components/utilities/GameModuleLoader";
+import RootRouter from "lib/components/routers/RootRouter";
+import generateStore from "lib/store/generateStore";
+import GameModuleLoader from "lib/components/utilities/GameModuleLoader";
 
 function ConnectedGameModuleLoader(props) {
   const activeModuleKey = useSelector((state) => state.game.module.activeModuleKey);

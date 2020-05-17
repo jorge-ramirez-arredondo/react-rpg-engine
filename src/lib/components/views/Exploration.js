@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 
-import { useGameModuleLoader } from "components/utilities/GameModuleLoader";
+import { useGameModuleLoader } from "lib/components/utilities/GameModuleLoader";
 
 function Exploration(props) {
   const { loading, activeModule } = useGameModuleLoader();

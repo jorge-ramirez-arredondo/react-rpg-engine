@@ -4,8 +4,8 @@ import {
   Route
 } from "react-router-dom";
 
-import routes from "constants/routes";
-import Exploration from "components/views/Exploration";
+import routes from "lib/constants/routes";
+import Exploration from "lib/components/views/Exploration";
 
 function GameViewsRouter(props) {
   return (
