@@ -1,23 +1,12 @@
 import React, { useRef } from "react";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 
 import RootRouter from "lib/components/routers/RootRouter";
 import generateStore from "lib/store/generateStore";
-import GameModuleLoader from "lib/components/utilities/GameModuleLoader";
-
-function ConnectedGameModuleLoader(props) {
-  const activeModuleKey = useSelector((state) => state.game.module.activeModuleKey);
-
-  return (
-    <GameModuleLoader
-      {...props}
-      activeModuleKey={activeModuleKey}
-    />
-  );
-}
+import GameModulesManager from "lib/components/utilities/GameModulesManager";
 
 function Engine(props) {
-  const { gameModules } = props;
+  const { moduleGetters } = props;
 
   const storeRef = useRef(null);
   if (storeRef.current === null) {
@@ -26,9 +15,9 @@ function Engine(props) {
 
   return (
     <Provider store={storeRef.current}>
-      <ConnectedGameModuleLoader gameModules={gameModules}>
+      <GameModulesManager moduleGetters={moduleGetters}>
         <RootRouter />
-      </ConnectedGameModuleLoader>
+      </GameModulesManager>
     </Provider>
   );
 }
