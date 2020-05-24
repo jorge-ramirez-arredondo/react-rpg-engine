@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 
-import gameModule from "./slices/gameModule";
 import player from "./slices/player";
+import playState from "./slices/playState";
 
 const gameReducer = combineReducers({
-  module: gameModule.reducer,
-  player: player.reducer
+  player: player.reducer,
+  playState: playState.reducer
 });
 
 const rootReducer = combineReducers({
